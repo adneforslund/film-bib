@@ -1,8 +1,56 @@
 body {
 	background-color: gray;
+	margin:0px;
+}
+#topBanner{
+	height: 50px;
 }
 
+#sistTilgjengelig{
+	background-color: black;
+	padding-top: 5px;
+	padding-bottom: 1px
+}
+
+.filmBox {
+	padding-left: 2px;
+	margin-right: 0px;
+	padding-bottom: 0px;
+	}
+
 .filmBox img {
-	height: 300px;
-	width: 300px;
-	};
+	height: auto;
+	width: 132px;
+	padding-bottom: 0px;
+	}
+.venstrePil{
+
+}
+.hoyrePil{
+
+}
+
+#filmTilgengelig1{
+
+}
+#filmTilgengelig2{
+
+}
+#filmTilgengelig3{
+
+}
+#filmTilgengelig4{
+	display: none;
+}
+#filmTilgengelig5{
+	display: none;
+}
+#filmTilgengelig5{
+	display: none;
+}
+#filmTilgengelig6{
+	display: none;
+}
+#filmTilgengelig7{
+	display: none;
+};
