@@ -1,5 +1,5 @@
 body {
-	background-color: gray;
+	background-color: #595959;
 	margin:0px;
 }
 #topBanner{
@@ -53,4 +53,25 @@ body {
 }
 #filmTilgengelig7{
 	display: none;
+}
+
+
+/*Skuespillersider*/
+#filmTittel{
+
+}
+.credits{
+
+}
+.beskrivelse{
+
+}
+.genre{
+
+}
+.regi{
+
+}
+.skuespiller_navn{
+   
 };
