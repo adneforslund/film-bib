@@ -30,31 +30,9 @@ body {
 
 }
 
-#filmTilgengelig1{
-
-}
-#filmTilgengelig2{
-
-}
-#filmTilgengelig3{
-
-}
-#filmTilgengelig4{
+.gjemt{
 	display: none;
 }
-#filmTilgengelig5{
-	display: none;
-}
-#filmTilgengelig5{
-	display: none;
-}
-#filmTilgengelig6{
-	display: none;
-}
-#filmTilgengelig7{
-	display: none;
-}
-
 
 /*Skuespillersider*/
 #filmTittel{
