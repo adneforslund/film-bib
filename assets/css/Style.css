@@ -2,26 +2,26 @@ body {
 	background-color: #595959;
 	margin:0px;
 }
+
 #topBanner{
-	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	height: 10vh;
 }
 
 #sistTilgjengelig{
 	background-color: black;
-	padding-top: 5px;
-	padding-bottom: 1px
+	padding: none;
 }
 
 .filmBox {
-	padding-left: 2px;
-	margin-right: 0px;
-	padding-bottom: 0px;
+
 	}
 
 .filmBox img {
-	height: auto;
-	width: 132px;
-	padding-bottom: 0px;
+	height: 160px;
+	width: auto;
+	vertical-align: bottom;
 	}
 .venstrePil{
 
@@ -33,6 +33,14 @@ body {
 .gjemt{
 	display: none;
 }
+.flex{
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
+}
+
+
+
 
 /*Skuespillersider*/
 #filmTittel{
