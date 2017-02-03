@@ -42,22 +42,62 @@ body {
 
 
 
+
+
+
+
+
 /*Skuespillersider*/
-#filmTittel{
+#tittelBlokk{
 
 }
+
+.skuespillerBlokk {
+    display: flex;
+    
+}
+.filmPoster{
+ 	float: left;
+
+}
+
+.filmPoster img{
+	display: block;
+}
+.filmTittel{
+	
+
+
+}
+.norskTittel{
+	
+}
 .credits{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100%;
+
+
+}
+
+.credits li{
+  margin-left: 30px;
 
 }
 .beskrivelse{
+text-align: left;
 
 }
 .genre{
 
+text-align: left;
 }
 .regi{
 
 }
-.skuespiller_navn{
+.skuespillerNavn{
    
 };
+
