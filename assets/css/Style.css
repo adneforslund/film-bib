@@ -41,12 +41,6 @@ body {
 
 
 
-
-
-
-
-
-
 /*Skuespillersider*/
 #tittelBlokk{
 
@@ -65,8 +59,6 @@ body {
 	display: block;
 }
 .filmTittel{
-	
-
 
 }
 .norskTittel{
@@ -78,8 +70,6 @@ body {
 	flex-direction: column;
 	justify-content: space-around;
 	height: 100%;
-
-
 }
 
 .credits li{
