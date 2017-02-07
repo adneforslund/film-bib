@@ -2,16 +2,56 @@ body {
 	background-color: #595959;
 	margin:0px;
 }
+footer{
+	padding: 10%;
+	font-family: sans-serif;
+}
+
+input{
+	font-size: 150%;
+	color: #5a5854;
+	background-color: #f2f2f2;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	padding: 10px;
+}
+nav{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black; 
+}
+nav a{
+	background-color: #606060;
+	text-decoration: none;
+	color:white;
+	font-family: monospace;
+	padding: 10px;
+	font-size: 150%;
+	border: 3px solid black;
+	border-radius: 25px;
+
+}
 
 #topBanner{
 	height: 10vh;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border-color: black;
+	border-bottom: 3px;
 }
-#sokebar{
+
+
+.sokebar{
 	height: 10vh;
 	display: flex;
+	align-items: center;
+	justify-content: space-around;
 	background-color: #666666;
 }
 
