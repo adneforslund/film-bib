@@ -4,10 +4,23 @@ body {
 }
 
 #topBanner{
-	display: flex;
-	justify-content: space-between;
 	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
+.ikon{
+	display: flex;
+	height: 50px;
+	padding: 5px
+}
+
+
+.snurrFilm{
+	background-color: black;
+	padding: none;
+}
+
 
 #sistTilgjengelig{
 	background-color: black;
