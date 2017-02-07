@@ -9,6 +9,12 @@ body {
 	align-items: center;
 	justify-content: space-between;
 }
+#sokebar{
+	height: 10vh;
+	display: flex;
+	background-color: #666666;
+}
+
 .ikon{
 	display: flex;
 	height: 50px;
@@ -59,10 +65,8 @@ body {
 	align-items: center;
 	justify-content: center;
 	margin-top: 0px;
-}
-.textLinjeForside h3{
-	font-family: "Arial Black", Gadget, sans-serif;
-	font-weight: 100;
+	font-family: monospace;
+	font-size: x-large;
 }
 
 
