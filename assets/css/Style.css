@@ -31,14 +31,16 @@ body {
 
 	}
 
-.filmBox img {
-	height: 160px;
-	width: auto;
+.filmBilde{
+	max-height: 160px;
+	max-width: 120px;
 	vertical-align: bottom;
 	}
+
 .venstrePil{
 
 }
+
 .hoyrePil{
 
 }
@@ -51,7 +53,17 @@ body {
     justify-content: space-between;
 	align-items: center;
 }
-
+.tekstLinjeForside{
+	color:lightgray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0px;
+}
+.textLinjeForside h3{
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-weight: 100;
+}
 
 
 /*Skuespillersider*/
