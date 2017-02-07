@@ -2,26 +2,26 @@ body {
 	background-color: #595959;
 	margin:0px;
 }
+
 #topBanner{
-	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	height: 10vh;
 }
 
 #sistTilgjengelig{
 	background-color: black;
-	padding-top: 5px;
-	padding-bottom: 1px
+	padding: none;
 }
 
 .filmBox {
-	padding-left: 2px;
-	margin-right: 0px;
-	padding-bottom: 0px;
+
 	}
 
 .filmBox img {
-	height: auto;
-	width: 132px;
-	padding-bottom: 0px;
+	height: 160px;
+	width: auto;
+	vertical-align: bottom;
 	}
 .venstrePil{
 
@@ -30,48 +30,64 @@ body {
 
 }
 
-#filmTilgengelig1{
+.gjemt{
+	display: none;
+}
+.flex{
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
+}
 
-}
-#filmTilgengelig2{
-
-}
-#filmTilgengelig3{
-
-}
-#filmTilgengelig4{
-	display: none;
-}
-#filmTilgengelig5{
-	display: none;
-}
-#filmTilgengelig5{
-	display: none;
-}
-#filmTilgengelig6{
-	display: none;
-}
-#filmTilgengelig7{
-	display: none;
-}
 
 
 /*Skuespillersider*/
-#filmTittel{
+#tittelBlokk{
 
 }
+
+.skuespillerBlokk {
+    display: flex;
+    
+}
+.filmPoster{
+ 	float: left;
+
+}
+
+.filmPoster img{
+	display: block;
+}
+.filmTittel{
+
+}
+.norskTittel{
+	
+}
 .credits{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100%;
+}
+
+.credits li{
+  margin-left: 30px;
 
 }
 .beskrivelse{
+text-align: left;
 
 }
 .genre{
 
+text-align: left;
 }
 .regi{
 
 }
-.skuespiller_navn{
+.skuespillerNavn{
    
 };
+
