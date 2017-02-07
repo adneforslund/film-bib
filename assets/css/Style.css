@@ -42,8 +42,7 @@ nav a{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	border-color: black;
-	border-bottom: 3px;
+	border-bottom:2px solid black;
 }
 
 
@@ -139,11 +138,22 @@ nav a{
 	flex-direction: column;
 	justify-content: space-around;
 	height: 100%;
+    
+}
+.credits a{
+	color: inherit;
 }
 
+
+.credits a:hover{
+	color: gold;
+}
+.credits a:visited{
+	color: brown;
+}
 .credits li{
   margin-left: 30px;
-
+  
 }
 .beskrivelse{
 text-align: left;
@@ -156,6 +166,13 @@ text-align: left;
 .regi{
 
 }
+.youtubeFilm{
+   width: 60%;
+   padding-bottom:  5%;
+   
+   margin: auto;
+}
+
 .skuespillerNavn{
    
 };
