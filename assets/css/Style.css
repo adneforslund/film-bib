@@ -110,6 +110,12 @@ nav a{
 
 
 /*Skuespillersider*/
+.wrapper{
+
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
 #tittelBlokk{
 
 }
@@ -120,7 +126,7 @@ nav a{
 }
 .filmPoster{
  	float: left;
-
+ 	padding: 0px;
 }
 
 .filmPoster img{
@@ -149,7 +155,11 @@ nav a{
 	color: gold;
 }
 .credits a:visited{
-	color: brown;
+	color: currentColor;
+
+}
+.credits ul{
+	padding-left: 0px;
 }
 .credits li{
   margin-left: 30px;
@@ -167,7 +177,7 @@ text-align: left;
 
 }
 .youtubeFilm{
-   width: 60%;
+   width: 55%;
    padding-bottom:  5%;
    
    margin: auto;
