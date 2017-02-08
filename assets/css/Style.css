@@ -110,6 +110,12 @@ nav a{
 
 
 /*Skuespillersider*/
+.wrapper{
+
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
 #tittelBlokk{
 
 }
@@ -120,12 +126,32 @@ nav a{
 }
 .filmPoster{
  	float: left;
-
+ 	padding: 0px;
 }
 
 .filmPoster img{
 	display: block;
+	max-width: 50vw;
 }
+
+#underbilder {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: none;
+max-width: 50vw;
+
+}
+#underbilder img{
+	width: 66px;
+	max-width: 12.5vw
+}
+.underbildesmaa{
+	vertical-align: bottom;
+	max-width: : 12.5vw;
+}
+
+
 .filmTittel{
 
 }
@@ -138,6 +164,7 @@ nav a{
 	flex-direction: column;
 	justify-content: space-around;
 	height: 100%;
+	padding: 0;
     
 }
 .credits a{
@@ -149,7 +176,11 @@ nav a{
 	color: gold;
 }
 .credits a:visited{
-	color: brown;
+	color: currentColor;
+
+}
+.credits{
+	
 }
 .credits li{
   margin-left: 30px;
@@ -167,7 +198,7 @@ text-align: left;
 
 }
 .youtubeFilm{
-   width: 60%;
+   width: 55%;
    padding-bottom:  5%;
    
    margin: auto;
