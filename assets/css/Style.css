@@ -131,7 +131,27 @@ nav a{
 
 .filmPoster img{
 	display: block;
+	max-width: 50vw;
 }
+
+#underbilder {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: none;
+max-width: 50vw;
+
+}
+#underbilder img{
+	width: 66px;
+	max-width: 12.5vw
+}
+.underbildesmaa{
+	vertical-align: bottom;
+	max-width: : 12.5vw;
+}
+
+
 .filmTittel{
 
 }
@@ -144,6 +164,7 @@ nav a{
 	flex-direction: column;
 	justify-content: space-around;
 	height: 100%;
+	padding: 0;
     
 }
 .credits a{
@@ -158,8 +179,8 @@ nav a{
 	color: currentColor;
 
 }
-.credits ul{
-	padding-left: 0px;
+.credits{
+	
 }
 .credits li{
   margin-left: 30px;
