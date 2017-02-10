@@ -15,6 +15,27 @@ input{
 	border-radius: 5px;
 	padding: 10px;
 }
+
+#tittelBlokk input{
+	font-size: 100%;
+	color: #5a5854;
+	background-color: #f2f2f2;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	padding: 5px;
+}
+button{
+	font-size: 100%;
+	color: #5a5854;
+	background-color: #f2f2f2;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+button:hover {
+  background-color: #f9f9f9;
+}
 nav{
 	display: flex;
 	flex-direction: column;
@@ -132,6 +153,7 @@ nav a{
 .filmPoster{
  	float: left;
  	padding: 0px;
+ 	background-color: black; 
 }
 
 .filmPoster img{
@@ -150,10 +172,13 @@ max-width: 50vw;
 #underbilder img{
 	width: 66px;
 	max-width: 12.5vw
+	
 }
 .underbildesmaa{
 	vertical-align: bottom;
-	max-width: : 12.5vw;
+	max-width:  12.5vw;
+	
+	background: black;
 }
 
 
@@ -211,6 +236,8 @@ text-align: left;
 .skuespillerNavn{
    
 }
+
+
 
 /*sokeresultatside*/
 .sokeresultater li{
