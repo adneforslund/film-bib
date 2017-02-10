@@ -37,6 +37,11 @@ nav a{
 
 }
 
+.sideinnhold{
+	max-width: 1280px;
+	margin: auto;
+}
+
 #topBanner{
 	height: 10vh;
 	display: flex;
@@ -60,17 +65,16 @@ nav a{
 	padding: 5px
 }
 
+.pil {
+	width: 2vh; 
+}
+
 
 .snurrFilm{
 	background-color: black;
 	padding: none;
 }
 
-
-#sistTilgjengelig{
-	background-color: black;
-	padding: none;
-}
 
 .filmBox {
 
@@ -103,9 +107,10 @@ nav a{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 0px;
 	font-family: monospace;
 	font-size: x-large;
+	margin-bottom: 0;
+	font-size: xx-large;
 }
 
 
@@ -200,11 +205,24 @@ text-align: left;
 .youtubeFilm{
    width: 55%;
    padding-bottom:  5%;
-   
    margin: auto;
 }
 
 .skuespillerNavn{
    
-};
+}
+
+/*sokeresultatside*/
+.sokeresultater li{
+	list-style: none;
+}
+
+details {
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-right: 7vw;
+}
+details summary::-webkit-details-marker { display:none; }
+
+;
 
