@@ -17,8 +17,9 @@ input{
 }
 nav{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
+	flex-flow: row wrap;
 	justify-content: space-around;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -34,7 +35,9 @@ nav a{
 	font-size: 150%;
 	border: 3px solid black;
 	border-radius: 25px;
-
+}
+nav a:hover{
+	background-color: #696969;
 }
 
 .sideinnhold{
@@ -213,6 +216,12 @@ text-align: left;
 }
 
 /*sokeresultatside*/
+
+.sokeresultater{
+	margin-left: 7vw;
+	margin-right: 7vW;
+}
+
 .sokeresultater li{
 	list-style: none;
 }
@@ -220,7 +229,6 @@ text-align: left;
 details {
     padding: 15px;
     margin-bottom: 20px;
-    margin-right: 7vw;
 }
 details summary::-webkit-details-marker { display:none; }
 
