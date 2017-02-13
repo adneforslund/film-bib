@@ -9,11 +9,23 @@
 	<body>
 		<div id ="topBanner">
 			<img class="ikon" id="menyknapp" src="../assets/images/Ikoner/menyknapp.png" alt="menyknapp">
-			
 			<img class="ikon" id="logo" src="../assets/images/Ikoner/pingvin2.png" alt="logo">
-			<img class="ikon" id="sokekanpp" src="../assets/images/Ikoner/sokeknapp2.png" alt="sokekanpp">
+			<img class="ikon" id="sokekanpp" src="../assets/images/Ikoner/sokeknapp2.png" alt="søkeknapp">
 			
 		</div>
+		<div class="gjemt sokebar">
+			<form id="sokeform" action="../assets/php/sok.php">
+				<input type="search" name="search" placeholder="søkeord" />
+				<input type="submit" value="Søk" />
+			</form>
+		</div>
+		<nav class="gjemt">
+			<a href="#">Mine reservasjoner</a>
+			<a href="#">Min Bruker</a>
+			<a href="#">Min Liste</a>
+			<a href="#">Mine lån</a>
+			<a href="#">Logg ut!</a>
+		</nav>
 		<div class="wrapper">
 		<div id="tittelBlokk">
 			<h3 class="filmTittel"> Intouchables (2011)</h3>

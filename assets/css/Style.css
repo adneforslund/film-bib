@@ -61,6 +61,7 @@ nav a:hover{
 	background-color: #696969;
 }
 
+
 .sideinnhold{
 	max-width: 1280px;
 	margin: auto;
@@ -250,6 +251,11 @@ text-align: left;
 	margin-right: 7vW;
 }
 
+.sokeresultater h1{
+	color: darkgray;
+}
+
+
 .sokeresultater li{
 	list-style: none;
 }
@@ -257,6 +263,8 @@ text-align: left;
 details {
     padding: 15px;
     margin-bottom: 20px;
+    background-color: #696969;
+	border-radius: 25px;
 }
 details summary::-webkit-details-marker { display:none; }
 
