@@ -157,11 +157,12 @@ nav a:hover{
  	float: left;
  	padding: 0px;
  	background-color: black; 
+
 }
 
 .filmPoster img{
 	display: block;
-	max-width: 50vw;
+	max-width: 400px;
 }
 
 #underbilder {
