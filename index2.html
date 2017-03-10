@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+  <meta charset="utf-8"/>
+  <head>
+    <!-- Don't need scripts here -->
+  </head>
+  <body onload="load_example();">
+    <h2 id="filmtittel">Filmbiblioteket</h2>
+    <a href="all_movies.html">All movies</a>
+	<!-- Skjemaet gir mulighet for å søke etter film tittel. Dere må inkludere muligheten for et mer avansert søk -->
+	<form id="search" action="search_results.html" method="get">
+		<div>
+			<h1>Quick search</h1>
+		</div>
+		<fieldset>
+			<legend>Søk</legend>
+			<div>
+				<label for="film_title">Film tittel</label>
+				<input id="film_title" name="film_title" type="text" placeholder="e.g. King Kong" >
+			</div>
+		</fieldset>
+		<input type="submit" id="submit_search" value="Søk">
+	</form>
+  </body>
+</html>
