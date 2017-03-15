@@ -6,24 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>UiB-Flix</title>
 		<link rel="stylesheet" href="assets/css/Style.css" type="text/css"/>
-		<script type="text/javascript" src="script/funksjoner.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script>
-				$(document).ready(function(){
-    				$("#sokekanpp").click(function(){
-       			 		$(".sokebar").toggleClass("gjemt");
-   				 	});
-   				 	$("#menyknapp").click(function(){
-       			 		$("nav").toggleClass("gjemt");
-   				 	});
-				});
-		</script>
 	</head>
 	<body>
 		<div id ="topBanner">
 			<img class="ikon" id="menyknapp" src="assets/images/Ikoner/menyknapp.png" alt="menyknapp">
 			<img class="ikon" id="logo" src="assets/images/Ikoner/pingvin2.png" alt="logo">
-			<img class="ikon" id="sokekanpp" src="assets/images/Ikoner/sokeknapp2.png" alt="søkeknapp">
+			<img class="ikon" id="sokeknapp" src="assets/images/Ikoner/sokeknapp2.png" alt="søkeknapp">
 			
 		</div>
 		<div class="gjemt sokebar">
@@ -92,5 +80,6 @@
 				
 			</div>
 		</div>
+		<script type="text/javascript" src="script/funksjoner.js"></script>
 	</body>
 </html>
