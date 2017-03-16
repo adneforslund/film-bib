@@ -1,31 +1,122 @@
+/* skrevet av kiy005 nedover*/
+
 body {
 	background-color: #595959;
 	margin:0px;
 }
-
-#topBanner{
-	display: flex;
-	justify-content: space-between;
-	height: 10vh;
+footer{
+	padding: 10%;
+	font-family: sans-serif;
 }
 
-#sistTilgjengelig{
+input{
+	font-size: 150%;
+	color: #5a5854;
+	background-color: #f2f2f2;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+#tittelBlokk input{
+	font-size: 100%;
+	color: #5a5854;
+	background-color: #f2f2f2;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	padding: 5px;
+}
+button{
+	font-size: 100%;
+	color: #5a5854;
+	background-color: #f2f2f2;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+button:hover {
+  background-color: #f9f9f9;
+}
+nav{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black; 
+}
+nav a{
+	background-color: #606060;
+	text-decoration: none;
+	color:white;
+	font-family: monospace;
+	padding: 10px;
+	font-size: 150%;
+	border: 3px solid black;
+	border-radius: 25px;
+}
+nav a:hover{
+	background-color: #696969;
+}
+
+
+.sideinnhold{
+	max-width: 1280px;
+	margin: auto;
+}
+
+#topBanner{
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom:2px solid black;
+}
+
+
+.sokebar{
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #666666;
+}
+
+.ikon{
+	display: flex;
+	height: 50px;
+	padding: 5px
+}
+
+.pil {
+	width: 2vh; 
+}
+
+
+.snurrFilm{
 	background-color: black;
 	padding: none;
 }
+
 
 .filmBox {
 
 	}
 
-.filmBox img {
-	height: 160px;
-	width: auto;
+.filmBilde{
+	max-width: 29vw;
+	max-height: 40vh;
 	vertical-align: bottom;
 	}
+
 .venstrePil{
 
 }
+
 .hoyrePil{
 
 }
@@ -38,10 +129,25 @@ body {
     justify-content: space-between;
 	align-items: center;
 }
+.tekstLinjeForside{
+	color:lightgray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: monospace;
+	font-size: x-large;
+	margin-bottom: 0;
+	font-size: xx-large;
+}
 
-
-
+/* skrevet av afo014 nedover*/
 /*Skuespillersider*/
+.wrapper{
+
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
 #tittelBlokk{
 
 }
@@ -52,12 +158,37 @@ body {
 }
 .filmPoster{
  	float: left;
+ 	padding: 0px;
+ 	background-color: black; 
 
 }
 
 .filmPoster img{
 	display: block;
+	max-width: 265px;
 }
+
+#underbilder {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: none;
+max-width: 50vw;
+
+}
+#underbilder img{
+	width: 66px;
+	max-width: 12.5vw
+	
+}
+.underbildesmaa{
+	vertical-align: bottom;
+	max-width:  12.5vw;
+	
+	background: black;
+}
+
+
 .filmTittel{
 
 }
@@ -70,11 +201,27 @@ body {
 	flex-direction: column;
 	justify-content: space-around;
 	height: 100%;
+	padding: 0;
+    
+}
+.credits a{
+	color: inherit;
 }
 
+
+.credits a:hover{
+	color: gold;
+}
+.credits a:visited{
+	color: currentColor;
+
+}
+.credits{
+	
+}
 .credits li{
   margin-left: 30px;
-
+  
 }
 .beskrivelse{
 text-align: left;
@@ -87,7 +234,41 @@ text-align: left;
 .regi{
 
 }
+.youtubeFilm{
+   width: 55%;
+   padding-bottom:  5%;
+   margin: auto;
+}
+
 .skuespillerNavn{
    
-};
+}
+
+
+/* skrevet av kiy005 nedover*/
+/*sokeresultatside*/
+
+.sokeresultater{
+	margin-left: 7vw;
+	margin-right: 7vW;
+}
+
+.sokeresultater h1{
+	color: darkgray;
+}
+
+
+.sokeresultater li{
+	list-style: none;
+}
+
+details {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #696969;
+	border-radius: 25px;
+}
+details summary::-webkit-details-marker { display:none; }
+
+;
 

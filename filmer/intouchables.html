@@ -1,50 +1,78 @@
 <!DOCTYPE html>
+<!-- Dette dokumementet er krevet av afo014  -->
+
 <html>
+	
 	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>TheIntouchables</title>
-	<link rel="stylesheet" href="../assets/css/Style.css" type="text/css" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>TheIntouchables</title>
+		<link rel="stylesheet" href="../assets/css/Style.css" type="text/css" />
 	</head>
-
 	<body>
-    <div id="topBanner">
-			<span id="menyKnapp">
+		<!-- topBanner er skrevet av kiy005 -->
+		<div id ="topBanner">
+			<img class="ikon" id="menyknapp" src="../assets/images/Ikoner/menyknapp.png" alt="menyknapp">
+			<a href="../index.html"><img class="ikon" id="logo" src="../assets/images/Ikoner/pingvin2.png" alt="logo"></a>
+			<img class="ikon" id="sokekanpp" src="../assets/images/Ikoner/sokeknapp2.png" alt="søkeknapp">
 			
-			</span>
-			
-			<span id="logo">
-				
-			</span>
-
-			<span id="sokeknapp">
-
-			</span>
-
-			<span id="sokebar">
-				
-			</span>
-			
-		
-
 		</div>
-    
-    <div id="tittelBlokk">
-    	 <h4 class="filmTittel"> Intouchables (2011)</h4>
-    	<h4 class="norskTittel">Norsk tittel: De Urørlige</h4>
-    <div/>
-    <section class="skuespillerBlokk">
-    	<div class="filmPoster" ><img src="../assets/images/Film1/The_Intouchables_3.jpg"></div>
-    	<div >
-    		<ui class="credits" >
-    			<li>Drama</li>
-    			<li>Regissør</li>
-    			<li>Skuespillere</li>
-    		</ui>
-    	</div>
-
-    
-	</section>
-	<p>Beskrivelse av filmen lajhffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff </p>
-	</body>
+		<div class="gjemt sokebar">
+			<form id="sokeform" action="../assets/php/sok.php">
+				<input type="search" name="search" placeholder="søkeord" />
+				<input type="submit" value="Søk" />
+			</form>
+		</div>
+		<nav class="gjemt">
+			<a href="#">Mine reservasjoner</a>
+			<a href="#">Min Bruker</a>
+			<a href="#">Min Liste</a>
+			<a href="#">Mine lån</a>
+			<a href="#">Logg ut!</a>
+		</nav>
+		<div class="wrapper">
+		<div id="tittelBlokk">
+			<h3 class="filmTittel"> Intouchables (2011)</h3>
+			<h3 class="norskTittel">Norsk tittel: De Urørlige</h3>
+		    <form action="#">
+		    <p>Like du denne filmen?
+		    <br />
+		    <input type="radio" name="rating" value="ja" /> ja
+		    <input type="radio" name="rating" value="litt" /> litt
+		    <input type="radio" name="rating" value="ikke så mye" /> ikke så mye
+		    <input type="radio" name="rating" value="nei" /> nei
+		    <input type="radio" name="rating" value="hatet den" /> hatet den &#160;
+		    <input type="submit" name="send_inn" value="send inn"> 	
+		    
+		    </p>
+		     
+		    </form>
+		    
+		    <button id="listeknapp">Legg til Min Liste</button>
+		</div>
+		<section class="skuespillerBlokk">
+			<div class="filmPoster" ><img src="../assets/images/Film1/The_Intouchables_3.jpg" alt="filmbilde">
+				<div id="underbilder">
+					<img class="underbildesmaa" src="../assets/images/Film1/The_Intouchables_1.jpg" alt="filmbilde">
+					<img class="underbildesmaa" src="../assets/images/Film1/The_Intouchables_2.jpg" alt="filmbilde">
+					<img class="underbildesmaa" src="../assets/images/Film1/The_Intouchables_4.jpg" alt="filmbilde">
+					<img class="underbildesmaa" src="../assets/images/Film1/The_Intouchables_5.jpg" alt="filmbilde">
+				</div>
+			</div>
+			<div >
+				<ul class="credits" >
+					<li>Genre: Drama</li>
+					<li>Regi:<a href="http://www.imdb.com/name/nm0619923/?ref_=nv_sr_1"> Olivier Nakache</a> /<a href="http://www.imdb.com/name/nm0865918/?ref_=nv_sr_1"> Eric Toledano</a></li>
+					<li>Skuespillere: <a href="http://www.imdb.com/name/nm2031248/?ref_=nv_sr_1">Alba Gaïa Kraghede Bellugi</a>,<a href="http://www.imdb.com/name/nm0494504/?ref_=tt_ov_st_sm"> Anne Le Ny</a>, <a href="http://www.imdb.com/name/nm1109153/?ref_=nv_sr_1"> Audrey Fleurot</a>, <a href="http://www.imdb.com/name/nm0597042/?ref_=nv_sr_3"> Clotilde Mollet </a>, <a href="http://www.imdb.com/name/nm0167388/?ref_=nv_sr_1"> Francois Cluzet</a> , <a href="http://www.imdb.com/name/nm1082477/?ref_=tt_ov_st_sm"> Omar Sy </a></li>
+				</ul>
+			</div>
+			
+		</section>
+		<p class="beskrivelse">Den sanne historien om to menn som aldri skulle ha møtt hverandre - De Urørlige er en oppløftende komedie om vennskap, tillit og menneskelige muligheter.
+			Mangemillionæren Philippe er lam fra nakken og ned etter en paragliderulykke, og må leve resten av livet i rullestol. Han bor i luksuriøse omgivelser i Paris og skal ansette en ny pleieassistent. Den eneste av søkerne som skiller seg ut er Driss - den unge mannen som har levert søknaden kun fordi han må vise at han er aktiv arbeidssøker for å beholde trygdepengene. Snart begynner et usannsynlig kameratskap forankret i ærlighet og humor mellom to individer som på overflaten ikke ville hatt noe til felles.
+		De Urørlige er basert på en utrolig, men sann historie. Filmen, som er sett av 20 millioner franskmenn, har blitt et internasjonalt fenomen og er den mest inntjenende ikke-engelskspråklige filmen i historien. </p>
+		<div class="youtubeFilm"><style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/34WIbmXkewU' frameborder='0' allowfullscreen></iframe></div>
+		</div>
+		</div>
+</body>
 </html>
