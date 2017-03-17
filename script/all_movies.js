@@ -16,6 +16,7 @@ function addFilm(where){
         img.src= "http://fillmurray.com/200/200";
         var a = document.createElement("a");
         a.href = "show_movie.html?id=" + movie_id;
+
         a.id = "film" + movie_id;
         img.className = "filmBilde";
         img.alt = movie_details.etitle;
@@ -24,6 +25,7 @@ function addFilm(where){
         }
         a.appendChild(img);
         container.appendChild(a);       
+
     }
 
     addArrow(("#" + where) ,false);
