@@ -14,4 +14,4 @@ function toggle(){
 sokeknapp.addEventListener("click", toggle);
 menyknapp.addEventListener("click", toggle);
 
-// testing av SUblime
+// testing ma dude
