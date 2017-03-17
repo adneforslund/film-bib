@@ -13,3 +13,5 @@ function toggle(){
 
 sokeknapp.addEventListener("click", toggle);
 menyknapp.addEventListener("click", toggle);
+
+// liten testpush
