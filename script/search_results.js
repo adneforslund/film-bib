@@ -6,7 +6,7 @@ function search_for_X(soekeStreng) {
     	if(soekeStreng === film.etitle || soekeStreng === film.ntitle ){
     		return film;
     	}
-    	// console.log(film);
+    	 console.log(film);
     }
 	
 	
@@ -18,8 +18,8 @@ function search_for_X(soekeStreng) {
 
 function display_X(results_list) {
  
-for (whatever in results_list) {
-	var film = results_list[whatever];
+for (indeks in results_list) {
+	var film = results_list[indeks];
     
 }
 }
