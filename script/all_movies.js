@@ -14,20 +14,23 @@ function addFilm(where, start){
         movie_details = movies_object[movie_id];
         var img = document.createElement("img");
         if (movie_id< (start+10)){
-        if (movie_id < 1000){
-            img.src= "https://nelson.uib.no/o/0/" + movie_id +".jpg";
-        }
-        else if (movie_id < 2000){
-            img.src= "https://nelson.uib.no/o/1/" + movie_id +".jpg";
-        }
-        else if (movie_id < 3000){
-            img.src= "https://nelson.uib.no/o/2/" + movie_id +".jpg";
-        }
+            if (movie_id < 1000){
+                img.src= "https://nelson.uib.no/o/0/" + movie_id +".jpg";
+            }
+            else if (movie_id < 2000){
+                img.src= "https://nelson.uib.no/o/1/" + movie_id +".jpg";
+            }
+            else if (movie_id < 3000){
+                img.src= "https://nelson.uib.no/o/2/" + movie_id +".jpg";
+            }
+            else{
+                img.src= "https://nelson.uib.no/o/3/" + movie_id +".jpg";
+            }
         }    
         var a = document.createElement("a");
         a.href = "show_movie.html?id=" + movie_id;
 
-        a.id = "film" + movie_id;
+        a.id = where +"film" + movie_id;
         img.className = "filmBilde";
         img.alt = movie_details.etitle;
         if (movie_id > (start+2)){
@@ -50,13 +53,13 @@ function addArrow(selector, isLeft){
     if(isLeft){
         img.src="assets/images/Ikoner/pilvenstre.png";
         img.alt="pil venstre";
-        img.className="pil";
+        img.className="pilvenstre pil";
     }
     else{
         img.src="assets/images/Ikoner/pilhoyre.png";
         img.alt="pil høyre";
-        img.className="pil";
+        img.className="pilhoyre pil";
     }
+    img.addEventListener("click", snurr);
     document.querySelector(selector).appendChild(img);
-
 }
