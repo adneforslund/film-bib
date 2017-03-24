@@ -172,7 +172,7 @@ nav a:hover{
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: none;
+padding: 0;
 max-width: 50vw;
 
 }

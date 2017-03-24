@@ -13,9 +13,18 @@ function snurr(){
 	if(this.classList.contains("pilhoyre")){
 		var forelder = this.parentNode.getAttribute("id");
 		var barn = this.parentNode.children;
-		for(i=1; i < 10; i++){
-			console.log(forelder + "film" + i);
+		var start = NaN;
+
+		for(i=1; i<(barn.length-1); i++){
+			if(barn[i].classList.contains("gjemt")==false){
+				if(start != start){
+				console.log(barn[i]);
+				start = i;
+				}
+			}
 		}
+		barn[start].classList.toggle("gjemt");
+		barn[start+3].classList.toggle("gjemt");
 
 	}
 	else{

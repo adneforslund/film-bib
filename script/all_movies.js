@@ -13,7 +13,7 @@ function addFilm(where, start){
     for (movie_id in movies_object){
         movie_details = movies_object[movie_id];
         var img = document.createElement("img");
-        if (movie_id< (start+10)){
+        if (movie_id< (start+30)){
             if (movie_id < 1000){
                 img.src= "https://nelson.uib.no/o/0/" + movie_id +".jpg";
             }
