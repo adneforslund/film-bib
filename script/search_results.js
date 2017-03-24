@@ -1,12 +1,14 @@
 /* Her kan dere implementere en søkefunksjon. For eksempel:
 */
+// skrevet av Adne Forslund/afo014
 function search_for_X(soekeStreng) {
     for(index in movies_object){
     	var film = movies_object[index];
-    	if(soekeStreng === film.etitle || soekeStreng === film.ntitle ){
+    	if(soekeStreng === film.otitle || soekeStreng === film.ntitle ){
     		return film;
+    		console.log(film);
     	}
-    	 console.log(film);
+    	 
     }
 	
 	
@@ -15,7 +17,7 @@ function search_for_X(soekeStreng) {
 
 /* Her kan dere implementere en display function som viser resulatetene av søket. For eksempel:
 */
-
+// skrevet av Adne Forslund/afo014
 function display_X(results_list) {
  
 for (indeks in results_list) {
@@ -27,18 +29,20 @@ for (indeks in results_list) {
 
 window.onload = function() {
 	query_params = get_query_string_parameters();
-    console.log(query_params);
 	search_results = movies_object;
     var results = []; 
 	if (query_params.film_title) {
         film_title = document.getElementById("film_title");
 		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
-        search_for_X(query_params.film_title);
+        var resultat = search_for_X(query_params.film_title);
+        console.log(resultat.otitle);
+        var tittelelement = document.getElementById("film_title");
+        tittelelement.innerHTML = resultat.otitle;
     }
 	
 	if (query_params.actor) {
         actor = document.getElementById("actor");
-		actor.innerHTML = query_params.actor;
+		actor.innerHTML = film.actor;
         search_for_X(query_params.actor);
     }
 	
