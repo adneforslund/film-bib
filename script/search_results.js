@@ -4,7 +4,7 @@
 function search_for_X(soekeStreng) {
     for(index in movies_object){
     	var film = movies_object[index];
-    	if(soekeStreng === film.otitle || soekeStreng === film.ntitle ){
+    	if(soekeStreng.toLowerCase() === film.otitle.toLowerCase() || soekeStreng.toLowerCase() === film.ntitle.toLowerCase() ){
     		return film;
     		console.log(film);
     	}
