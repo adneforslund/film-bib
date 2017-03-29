@@ -37,8 +37,9 @@ window.onload = function() {
     
     
     // render page
-    var title_element = document.getElementById("otitle");
+    var title_element = document.getElementsByClassName("filmTittel")[0];
     // title_element.appendChild(document.createTextNode(movie_object["otitle"]));    
+    console.log(title_element);
     title_element.innerHTML = movie_object["otitle"];
     
     // add a "debug-table" on the bottom showing all elements from movie_object
