@@ -10,7 +10,7 @@ function addFilm(where, start){
     var container = document.getElementById(where);
     addArrow(("#" + where) ,true);
 
-    for (movie_id in movies_object && movie_id < start+3){
+    for (movie_id in movies_object){
         movie_details = movies_object[movie_id];
         var img = document.createElement("img");
         if (movie_id < (start+30)){
