@@ -10,12 +10,13 @@ function addFilm(where, start){
     var container = document.getElementById(where);
     addArrow(("#" + where) ,true);
 
-    for (movie_id in movies_object){
+    for (movie_id in movies_object && movie_id < start+3){
         movie_details = movies_object[movie_id];
         var img = document.createElement("img");
-        if (movie_id< (start+30)){
+        if (movie_id < (start+30)){
             if (movie_id < 1000){
                 img.src= "https://nelson.uib.no/o/0/" + movie_id +".jpg";
+
             }
             else if (movie_id < 2000){
                 img.src= "https://nelson.uib.no/o/1/" + movie_id +".jpg";
@@ -27,6 +28,9 @@ function addFilm(where, start){
                 img.src= "https://nelson.uib.no/o/3/" + movie_id +".jpg";
             }
         }    
+        img.onerror = function(){
+            this.src = "http://fillmurray.com/200/200";
+        }
         var a = document.createElement("a");
         a.href = "show_movie.html?id=" + movie_id;
 

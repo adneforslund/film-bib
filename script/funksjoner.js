@@ -10,15 +10,16 @@ function toggle(){
 }
 
 function snurr(){
+
+	var forelder = this.parentNode.getAttribute("id");
+	var barn = this.parentNode.children;
+	var start = NaN;
+
 	if(this.classList.contains("pilhoyre")){
-		var forelder = this.parentNode.getAttribute("id");
-		var barn = this.parentNode.children;
-		var start = NaN;
 
 		for(i=1; i<(barn.length-1); i++){
 			if(barn[i].classList.contains("gjemt")==false){
 				if(start != start){
-				console.log(barn[i]);
 				start = i;
 				}
 			}
@@ -28,7 +29,18 @@ function snurr(){
 
 	}
 	else{
-		console.log("venstre");
+
+		for(i=1; i<(barn.length-1); i++){
+			if(barn[i].classList.contains("gjemt")==false){
+				if(start != start){
+				start = i;
+				}
+			}
+		}
+		if(start>2){
+		barn[start+2].classList.toggle("gjemt");
+		barn[start-1].classList.toggle("gjemt");
+		}
 	}
 }
 
