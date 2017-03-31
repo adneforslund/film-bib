@@ -37,9 +37,37 @@ window.onload = function() {
     
     
     // render page
-    var title_element = document.getElementById("otitle");
+    var title_element = document.getElementById("filmTittel");
     // title_element.appendChild(document.createTextNode(movie_object["otitle"]));    
+    console.log(title_element);
     title_element.innerHTML = movie_object["otitle"];
+    
+    // metode for norsk tittel
+    var title_elementNorsk = document.getElementById("norskTittel");
+    console.log(title_elementNorsk);
+    title_elementNorsk.innerHTML = ("Norsk tittel: " + movie_object["ntitle"])
+    
+    //metode for aa hente genre paa film
+    var title_elementGenre = document.getElementById("genre");
+    console.log(title_elementGenre);
+    title_elementGenre.innerHTML = ("Genre : " + genre_object);
+
+    // metode for a hente beskrivelse
+    var title_elementBeskrivelse = document.getElementById("beskrivelse");
+    console.log(title_elementBeskrivelse);
+    title_elementBeskrivelse.innerHTML = movie_object["description"];
+
+    //metode for youtube
+    var title_elementYouTube = document.getElementById("youtubeFilm");
+    title_elementYouTube.innerHTML = movie_object["youtube trailer id"]
+
+    // metode for a hente skuespillere
+
+
+    // metode for a hente a hente bilder
+
+
+
     
     // add a "debug-table" on the bottom showing all elements from movie_object
     stats_table = document.getElementById("movie_stat_table");
