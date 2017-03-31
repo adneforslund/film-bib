@@ -37,10 +37,25 @@ window.onload = function() {
     
     
     // render page
-    var title_element = document.getElementsByClassName("filmTittel")[0];
+    var title_element = document.getElementById("filmTittel");
     // title_element.appendChild(document.createTextNode(movie_object["otitle"]));    
     console.log(title_element);
     title_element.innerHTML = movie_object["otitle"];
+    
+    // metode for norsk tittel
+    var title_elementNorsk = document.getElementById("norskTittel");
+    console.log(title_elementNorsk);
+    title_elementNorsk.innerHTML = ("Norsk tittel: " + movie_object["ntitle"])
+    
+    //metode for aa hente genre paa film
+    var title_elementGenre = document.getElementById("genre");
+    console.log(title_elementGenre);
+    title_elementGenre.innerHTML = ("Genre : " + genre_object)
+
+    
+
+
+
     
     // add a "debug-table" on the bottom showing all elements from movie_object
     stats_table = document.getElementById("movie_stat_table");
