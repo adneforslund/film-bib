@@ -3,11 +3,31 @@
 <html>
   <meta charset="utf-8"/>
   <head>
+  	<link rel="stylesheet" href="assets/css/Style.css" type="text/css"/>
     <script src="script/query_params.js" type="text/javascript"></script>
 	<script src="script/search_results.js" type="text/javascript"></script>
 	<script src="script/object.js" type="text/javascript"></script>
   </head>
   <body>
+  	<div id ="topBanner">
+			<img class="ikon" id="menyknapp" src="assets/images/Ikoner/menyknapp.png" alt="menyknappen">
+			<img class="ikon" id="logo" src="assets/images/Ikoner/pingvin2.png" alt="logo">
+			<img class="ikon" id="sokeknapp" src="assets/images/Ikoner/sokeknapp2.png" alt="søkeknapp">
+			
+		</div>
+		<div class="gjemt sokebar">
+			<form id="search" action="search_results.html" method="get">
+				<input id="film_title" name="film_title" type="text" placeholder="søkeord" />
+				<input type="submit" id="submit_search" value="Søk" />
+			</form>
+		</div>
+		<nav class="gjemt">
+			<a href="#">Mine reservasjoner</a>
+			<a href="#">Min Bruker</a>
+			<a href="#">Min Liste</a>
+			<a href="#">Mine lån</a>
+			<a href="#">Logg ut!</a>
+		</nav>
 	<div id="film_title"></div>
 	<div id="actor"></div>
 	<div id="director"></div>
@@ -15,5 +35,7 @@
 	<div id="country"></div>
 	<!-- Returnere resultatene som en (ordered <ol>) liste -->
 	<ol id="res_list"></ol>
+	<script type="text/javascript" src="script/funksjoner.js"></script>
   </body>
 </html>
+
