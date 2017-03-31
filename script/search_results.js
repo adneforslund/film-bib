@@ -1,11 +1,15 @@
+
+// variabler
+var arr = [];
+
+
 /* Her kan dere implementere en søkefunksjon. For eksempel:
 */
-// skrevet av Adne Forslund/afo014
-function search_for_X(soekeStreng, what) {
+// skrevet av Adne Forslund/afo014, forbedret av Bjørnar Herland/kiy005
+function search_for_X(soekeStreng) {
     for(index in movies_object){
     	var film_object = movies_object[index];
     	if(soekeStreng.toLowerCase() === film_object.otitle.toLowerCase() || soekeStreng.toLowerCase() === film_object.ntitle.toLowerCase() ){
-    		console.log(film_object);
     		build_search_results(film_object);
     	}
     }
@@ -16,14 +20,30 @@ function search_for_X(soekeStreng, what) {
 
 /* Her kan dere implementere en display function som viser resulatetene av søket. For eksempel:
 */
-// skrevet av Adne Forslund/afo014
-function display_X(results_list) {
- 
-for (indeks in results_list) {
-	var film = results_list[indeks];
-// skrevet av Bjørnar Herland
-	
-}
+// skrevet av Bjørnar Herland/kiy005
+function display_X() {
+ var container = document.getElementById("sokeresultatListe");
+	for (indeks in arr) {
+		var film = arr[indeks];
+		// var tittelelement = document.getElementById("sokeres");
+		// tittelelement.innerHTML = film;
+		var li = document.createElement("li");
+		var details = document.createElement("details");
+		var summary = document.createElement("summary");
+		var summaryTekst = document.createElement("h2");
+		var summaryTekstinnhold = document.createTextNode(film.otitle);
+		var detailsTekst = document.createElement("p");
+		var detailsTekstinnhold = document.createTextNode(film.description);
+		detailsTekst.appendChild(detailsTekstinnhold);
+		summaryTekst.appendChild(summaryTekstinnhold);
+		summary.appendChild(summaryTekst);
+		details.appendChild(summary);
+		details.appendChild(detailsTekst)
+		li.appendChild(details);
+		container.appendChild(li);
+		alert('done')
+
+		}
 
 }
 
@@ -35,7 +55,10 @@ window.onload = function() {
 	if (query_params.film_title) {
         film_title = document.getElementById("film_title");
 		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
-        var resultat = search_for_X(query_params.film_title, 0);
+        var resultat = search_for_X(query_params.film_title);
+
+        var sokerEtter = document.getElementById("sokerEtter");
+        sokerEtter.innerHTML=query_params.film_title;
 
         /* console.log(resultat.otitle);
         var tittelelement = document.getElementById("film_title");
@@ -45,25 +68,25 @@ window.onload = function() {
 	if (query_params.actor) {
         actor = document.getElementById("actor");
 		actor.innerHTML = film.actor;
-        search_for_X(query_params.actor, 1);
+        search_for_X(query_params.actor);
     }
 	
 	if (query_params.director) {
 		director = document.getElementById("director");
 		director.innerHTML = query_params.director;
-		search_for_X(query_params.actor, 2);
+		search_for_X(query_params.actor);
     }
 	
 	if (query_params.genre) {
         genre = document.getElementById("genre");
 		genre.innerHTML = query_params.genre;
-		search_for_X(query_params.actor, 3);
+		search_for_X(query_params.actor);
     }
 	
 	if (query_params.country) {
         country = document.getElementById("country");
 		country.innerHTML = query_params.country;
-		search_for_X(query_params.actor, 4);
+		search_for_X(query_params.actor);
     }
 	display_X();
 	
@@ -71,6 +94,6 @@ window.onload = function() {
 }
 
 // skrevet av Bjørnar Herland
-function build_search_results(film_object){
-
+function build_search_results(film_object) {
+	arr.push(film_object);
 }
