@@ -248,17 +248,17 @@ text-align: left;
 /* skrevet av kiy005 nedover*/
 /*sokeresultatside*/
 
-.sokeresultater{
+#sokeresultater{
 	margin-left: 7vw;
 	margin-right: 7vW;
 }
 
-.sokeresultater h1{
+#sokeresultater h1{
 	color: darkgray;
 }
 
 
-.sokeresultater li{
+#sokeresultater li{
 	list-style: none;
 }
 

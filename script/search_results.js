@@ -22,28 +22,44 @@ function search_for_X(soekeStreng) {
 */
 // skrevet av Bjørnar Herland/kiy005
 function display_X() {
- var container = document.getElementById("sokeresultatListe");
-	for (indeks in arr) {
-		var film = arr[indeks];
-		// var tittelelement = document.getElementById("sokeres");
-		// tittelelement.innerHTML = film;
-		var li = document.createElement("li");
-		var details = document.createElement("details");
-		var summary = document.createElement("summary");
-		var summaryTekst = document.createElement("h2");
-		var summaryTekstinnhold = document.createTextNode(film.otitle);
-		var detailsTekst = document.createElement("p");
-		var detailsTekstinnhold = document.createTextNode(film.description);
-		detailsTekst.appendChild(detailsTekstinnhold);
-		summaryTekst.appendChild(summaryTekstinnhold);
-		summary.appendChild(summaryTekst);
-		details.appendChild(summary);
-		details.appendChild(detailsTekst)
-		li.appendChild(details);
-		container.appendChild(li);
-		alert('done')
+	var container = document.getElementById("sokeresultater");
 
+ 	if (arr.length > 0) {
+
+ 			var ul = document.createElement("ul");
+
+		for (indeks in arr) {
+			var film = arr[indeks];
+			var li = document.createElement("li");
+			var details = document.createElement("details");
+			var summary = document.createElement("summary");
+			var summaryTekst = document.createElement("h2");
+			var summaryTekstinnhold = document.createTextNode(film.otitle);
+			var detailsTekst = document.createElement("p");
+			var link = document.createElement("a");
+			var linkTekst = document.createTextNode("Les mer...");
+			link.href = "show_movie.html?id=" + film.id;
+			link.appendChild(linkTekst);
+			var detailsTekstinnhold = document.createTextNode(film.description + " ");
+			detailsTekst.appendChild(detailsTekstinnhold);
+			detailsTekst.appendChild(link);
+			summaryTekst.appendChild(summaryTekstinnhold);
+			summary.appendChild(summaryTekst);
+			details.appendChild(summary);
+			details.appendChild(detailsTekst)
+			li.appendChild(details);
+			ul.appendChild(li);
+			container.appendChild(ul);
 		}
+	}
+
+	else{
+		var ingenResultater = document.createElement("h3");
+		var ingenResultaterTekst = document.createTextNode("Ditt søk ga desverre ingen søkeresultater");
+		ingenResultater.appendChild(ingenResultaterTekst);
+		container.appendChild(ingenResultater);
+	}
+
 
 }
 
@@ -56,9 +72,6 @@ window.onload = function() {
         film_title = document.getElementById("film_title");
 		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
         var resultat = search_for_X(query_params.film_title);
-
-        var sokerEtter = document.getElementById("sokerEtter");
-        sokerEtter.innerHTML=query_params.film_title;
 
         /* console.log(resultat.otitle);
         var tittelelement = document.getElementById("film_title");
