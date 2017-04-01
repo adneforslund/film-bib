@@ -50,19 +50,29 @@ window.onload = function() {
     //metode for aa hente genre paa film
     var title_elementGenre = document.getElementById("genre");
     console.log(title_elementGenre);
-    title_elementGenre.innerHTML = ("Genre : " + genre_object);
+    title_elementGenre.innerHTML = ("Genre : " + genre_object + ".");
 
     // metode for a hente beskrivelse
     var title_elementBeskrivelse = document.getElementById("beskrivelse");
     console.log(title_elementBeskrivelse);
     title_elementBeskrivelse.innerHTML = movie_object["description"];
+    
+
+    // metode for regi
+    var title_elementRegi = document.getElementById("regi");
+    console.log(title_elementRegi);
+    var dir = movie_object["dir"] + "";
+    title_elementRegi.innerHTML = ("Regi: " + dir +".");
 
     //metode for youtube
-    var title_elementYouTube = document.getElementById("youtubeFilm");
-    title_elementYouTube.innerHTML = movie_object["youtube trailer id"]
-
+    var iframe = document.getElementById("youtubeLink");
+    var link = movie_object["youtube trailer id"] + "";
+    
+    iframe.setAttribute("src", link);
+    
     // metode for a hente skuespillere
-
+    var title_elementSkuespiller = document.getElementById("skuespillere");
+    title_elementSkuespiller.innerHTML = movie_object["folk"];
 
     // metode for a hente a hente bilder
 
