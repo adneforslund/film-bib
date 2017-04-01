@@ -38,6 +38,28 @@ function search_for_X(soekeStreng, searchForWhat) {
    			}
     	}
 	}
+	else if(searchForWhat == "genre"){
+    	for(index in movies_object){
+   		 	var film_object = movies_object[index];
+    		genre = film_object.dir;
+    		if (genre){
+    			if(dir.toLowerCase().includes(soekeStreng.toLowerCase())){
+    				build_search_results(film_object);
+   		 		}
+   			}
+    	}
+	}
+	else if(searchForWhat == "country"){
+    	for(index in movies_object){
+   		 	var film_object = movies_object[index];
+    		country = film_object.country;
+    		if (country){
+    			if(country.toLowerCase().includes(soekeStreng.toLowerCase())){
+    				build_search_results(film_object);
+   		 		}
+   			}
+    	}
+	}
 	
 } 
 
