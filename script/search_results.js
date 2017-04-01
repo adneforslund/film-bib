@@ -16,14 +16,28 @@ function search_for_X(soekeStreng, searchForWhat) {
     	}
 	}
 	// skrevet av Bjørnar Herland/kiy005
-	else if(searchForWhat == "actor")
-    for(index in movies_object){
-    	var film_object = movies_object[index];
-    	if(soekeStreng.toLowerCase().includes(film_object.folk.toLowerCase())){
-    		build_search_results(film_object);
+	else if(searchForWhat == "actor"){
+    	for(index in movies_object){
+   		 	var film_object = movies_object[index];
+    		folk = film_object.folk;
+    		if (folk){
+    			if(folk.toLowerCase().includes(soekeStreng.toLowerCase())){
+    				build_search_results(film_object);
+   		 		}
+   			}
     	}
-    }
-	
+	}
+	else if(searchForWhat == "director"){
+    	for(index in movies_object){
+   		 	var film_object = movies_object[index];
+    		dir = film_object.dir;
+    		if (dir){
+    			if(dir.toLowerCase().includes(soekeStreng.toLowerCase())){
+    				build_search_results(film_object);
+   		 		}
+   			}
+    	}
+	}
 	
 } 
 
@@ -87,25 +101,25 @@ window.onload = function() {
 	
 	if (query_params.actor) {
 		//søker etter tittel og skriver ut hva den søkeretter i toppen av siden. 
-        var resultat = search_for_X(query_params.actor);
+        var resultat = search_for_X(query_params.actor, "actor");
         var searching_for = document.getElementById("sokerEtter");
     	searching_for.innerHTML=query_params.actor;
     }
 	
 	if (query_params.director) {
-		var resultat = search_for_X(query_params.director);
+		var resultat = search_for_X(query_params.director, "director");
         var searching_for = document.getElementById("sokerEtter");
     	searching_for.innerHTML=query_params.director;
     }
 	
 	if (query_params.genre) {
-        var resultat = search_for_X(query_params.genre);
+        var resultat = search_for_X(query_params.genre, "genre");
         var searching_for = document.getElementById("sokerEtter");
     	searching_for.innerHTML=query_params.genre;
     }
 	
 	if (query_params.country) {
-        var resultat = search_for_X(query_params.country);
+        var resultat = search_for_X(query_params.country, "country");
         var searching_for = document.getElementById("sokerEtter");
     	searching_for.innerHTML=query_params.country;
     }
