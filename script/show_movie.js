@@ -74,11 +74,44 @@ window.onload = function() {
     var title_elementSkuespiller = document.getElementById("skuespillere");
     title_elementSkuespiller.innerHTML = movie_object["folk"];
 
-    // metode for a hente a hente bilder
+    // metode for a hente a hente stor bilde / skrevet av Bjørnar Herland/kiy005
+    var filmbilde = document.getElementById("filmbilde");
+    if (movie_object.id<1000) {
+        filmbilde.src = filmbilde.src= "https://nelson.uib.no/o/0/" + movie_object.id +".jpg";
+        legginnsmaabilder(0);
+    }
+    else if(movie_object.id<2000){
+        filmbilde.src = filmbilde.src= "https://nelson.uib.no/o/1/" + movie_object.id +".jpg";
+        legginnsmaabilder(1);
+    }
+    else if(movie_object.id<3000){
+        filmbilde.src = filmbilde.src= "https://nelson.uib.no/o/2/" + movie_object.id +".jpg";
+        legginnsmaabilder(2);
+    }
+    else{
+        filmbilde.src = filmbilde.src= "https://nelson.uib.no/o/3/" + movie_object.id +".jpg";
+        legginnsmaabilder(3);
+    }
 
+    // metode for a hente a hente små bilder skrevet av Bjørnar Herland/kiy005
+    function legginnsmaabilder(tall) {
+    for(i=0;i<4;i++){
+        var smaabilde =  document.getElementsByClassName("underbildesmaa")[i];
+        if(i==0){
+            smaabilde.src = "https://nelson.uib.no/o/"+tall+"/" + movie_object.id +"b.jpg";
+        }
+        else if(i==1){
+            smaabilde.src = "https://nelson.uib.no/o/"+tall+"/" + movie_object.id +"c.jpg";
+        }
+        else if(i==2){
+            smaabilde.src = "https://nelson.uib.no/o/"+tall+"/" + movie_object.id +"d.jpg";
+        }
+        else if(i==3){
+            smaabilde.src = "https://nelson.uib.no/o/"+tall+"/" + movie_object.id +"e.jpg";
+        }
+    }
+    }
 
-
-    
     // add a "debug-table" on the bottom showing all elements from movie_object
     stats_table = document.getElementById("movie_stat_table");
     for (key in movie_object) {
