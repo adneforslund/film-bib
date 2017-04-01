@@ -67,7 +67,7 @@ window.onload = function() {
     //metode for youtube
     var iframe = document.getElementById("youtubeLink");
     var link = movie_object["youtube trailer id"] + "";
-    
+    link = "https://www.youtube.com/embed/" + link;
     iframe.setAttribute("src", link);
     
     // metode for a hente skuespillere
