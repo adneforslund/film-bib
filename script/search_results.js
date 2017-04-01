@@ -39,12 +39,13 @@ function search_for_X(soekeStreng, searchForWhat) {
     	}
 	}
 	else if(searchForWhat == "genre"){
-    	for(index in movies_object){
-   		 	var film_object = movies_object[index];
-    		genre = film_object.dir;
-    		if (genre){
-    			if(dir.toLowerCase().includes(soekeStreng.toLowerCase())){
-    				build_search_results(film_object);
+    	for(index in genres_object){
+   		 	var film_object = genres_object[index];
+    		genres = film_object;
+    		if (genres){
+    			if(genres.includes(soekeStreng.toLowerCase())){
+    				build_search_results(movies_object[index]);
+    				console.log(index);
    		 		}
    			}
     	}
@@ -76,6 +77,7 @@ function display_X() {
 
 		for (indeks in arr) {
 			var film = arr[indeks];
+			if (film){
 			var li = document.createElement("li");
 			var details = document.createElement("details");
 			var summary = document.createElement("summary");
@@ -96,6 +98,7 @@ function display_X() {
 			li.appendChild(details);
 			ul.appendChild(li);
 			container.appendChild(ul);
+		}
 		}
 	}
 
