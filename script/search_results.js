@@ -6,10 +6,20 @@ var arr = [];
 /* Her kan dere implementere en søkefunksjon. For eksempel:
 */
 // skrevet av Adne Forslund/afo014, forbedret av Bjørnar Herland/kiy005
-function search_for_X(soekeStreng) {
+function search_for_X(soekeStreng, searchForWhat) {
+	if(searchForWhat == "film_title"){
+		for(index in movies_object){
+    		var film_object = movies_object[index];
+    		if(soekeStreng.toLowerCase() === film_object.otitle.toLowerCase() || soekeStreng.toLowerCase() === film_object.ntitle.toLowerCase() ){
+    			build_search_results(film_object);
+    		}
+    	}
+	}
+	// skrevet av Bjørnar Herland/kiy005
+	else if(searchForWhat == "actor")
     for(index in movies_object){
     	var film_object = movies_object[index];
-    	if(soekeStreng.toLowerCase() === film_object.otitle.toLowerCase() || soekeStreng.toLowerCase() === film_object.ntitle.toLowerCase() ){
+    	if(soekeStreng.toLowerCase().includes(film_object.folk.toLowerCase())){
     		build_search_results(film_object);
     	}
     }
@@ -69,37 +79,35 @@ window.onload = function() {
 	search_results = movies_object;
     var results = []; 
 	if (query_params.film_title) {
-        film_title = document.getElementById("film_title");
-		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
-        var resultat = search_for_X(query_params.film_title);
-
-        /* console.log(resultat.otitle);
-        var tittelelement = document.getElementById("film_title");
-        tittelelement.innerHTML = resultat.otitle; */
+		//søker etter tittel og skriver ut hva den søkeretter i toppen av siden. 
+        var resultat = search_for_X(query_params.film_title, "film_title");
+        var searching_for = document.getElementById("sokerEtter");
+    	searching_for.innerHTML=query_params.film_title;
     }
 	
 	if (query_params.actor) {
-        actor = document.getElementById("actor");
-		actor.innerHTML = film.actor;
-        search_for_X(query_params.actor);
+		//søker etter tittel og skriver ut hva den søkeretter i toppen av siden. 
+        var resultat = search_for_X(query_params.actor);
+        var searching_for = document.getElementById("sokerEtter");
+    	searching_for.innerHTML=query_params.actor;
     }
 	
 	if (query_params.director) {
-		director = document.getElementById("director");
-		director.innerHTML = query_params.director;
-		search_for_X(query_params.actor);
+		var resultat = search_for_X(query_params.director);
+        var searching_for = document.getElementById("sokerEtter");
+    	searching_for.innerHTML=query_params.director;
     }
 	
 	if (query_params.genre) {
-        genre = document.getElementById("genre");
-		genre.innerHTML = query_params.genre;
-		search_for_X(query_params.actor);
+        var resultat = search_for_X(query_params.genre);
+        var searching_for = document.getElementById("sokerEtter");
+    	searching_for.innerHTML=query_params.genre;
     }
 	
 	if (query_params.country) {
-        country = document.getElementById("country");
-		country.innerHTML = query_params.country;
-		search_for_X(query_params.actor);
+        var resultat = search_for_X(query_params.country);
+        var searching_for = document.getElementById("sokerEtter");
+    	searching_for.innerHTML=query_params.country;
     }
 	display_X();
 	
