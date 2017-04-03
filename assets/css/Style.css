@@ -250,7 +250,15 @@ text-align: left;
    
 }
 
+#kommentarfelt{
 
+}
+
+#kommentarInput{
+	height:200px;
+    font-size:14pt;
+    width: 70vw;
+}
 /* skrevet av kiy005 nedover*/
 /*sokeresultatside*/
 

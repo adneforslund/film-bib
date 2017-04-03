@@ -93,6 +93,27 @@ window.onload = function() {
     var title_elementSkuespiller = document.getElementById("skuespillere");
     title_elementSkuespiller.innerHTML = movie_object["folk"];
 
+
+    // metode for a få kommentarfelt
+    var title_elementReview = document.getElementById("kommentarer");
+    
+    for (key in review_object){
+        var li = document.createElement("li");
+        if(typeof review_object[key].comment == "string"){
+            if (review_object[key].comment !== "") {
+            var tekst =document.createTextNode(review_object[key].mod_date + ", Bruker: " + review_object[key].username);
+            var linjeskift =document.createElement("br");
+            var tekst2 =document.createTextNode(" Vurdering: "+ review_object[key].comment);
+            li.appendChild(tekst);
+            li.appendChild(linjeskift);
+            li.appendChild(tekst2);
+            title_elementReview.appendChild(li);
+            }
+        }
+    }
+
+
+
     // metode for a hente a hente stor bilde / skrevet av Bjørnar Herland/kiy005
     var filmbilde = document.getElementById("filmbilde");
     if (movie_object.id<1000) {
@@ -132,32 +153,5 @@ window.onload = function() {
     }
 
     // add a "debug-table" on the bottom showing all elements from movie_object
-    stats_table = document.getElementById("movie_stat_table");
-    for (key in movie_object) {
-        left = document.createTextNode(key);
-        right = document.createTextNode(movie_object[key]);
-        add_row(stats_table, left, right);
-    }
     
-    // add a "debug-table" on the bottom showing all genre info
-    genre_table = document.getElementById("genre_stat_table");
-    for (var i in genre_object) {
-		left = document.createTextNode(i);
-		right = document.createTextNode(genre_object[i]);
-		add_row(genre_table, left, right);
-    }
-
-    // review object debug-table
-    review_table = document.getElementById("review_stat_table");
-    for (key in review_object) {
-	left = document.createTextNode(key);
-	right = document.createTextNode(review_object[key]);
-	add_row(review_table, left, right);
-	for (subkey in review_object[key]) {
-	    left = document.createTextNode(" -> " + subkey);
-	    right = document.createTextNode(review_object[key][subkey]);
-	    add_row(review_table, left, right);
-         console.log(right + ": " + key + "   " + subkey );
-	}
-    }
 };
