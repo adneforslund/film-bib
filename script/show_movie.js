@@ -1,3 +1,7 @@
+
+
+// klassen er skrevet av Ådne Forslund/afo014
+
 function panic(message) {
     // window.history.back();
     alert(message);
@@ -45,7 +49,22 @@ window.onload = function() {
     // metode for norsk tittel
     var title_elementNorsk = document.getElementById("norskTittel");
     console.log(title_elementNorsk);
-    title_elementNorsk.innerHTML = ("Norsk tittel: " + movie_object["ntitle"])
+    title_elementNorsk.innerHTML = ("Norsk tittel: " + movie_object["ntitle"]);
+
+    // metode for rating fra bruker xyz001, kan forandres til å hente fra flere
+    var review_element = document.getElementById("ratingTall");
+    console.log(review_object.rating)
+
+    var sammenlagt = 0;
+    var antall =0 ;
+    var snitt = 0;
+    for(ratingNokkel in review_object){
+        sammenlagt += review_object[ratingNokkel].rating;
+        antall++;
+    }
+    snitt = sammenlagt/antall;
+
+    review_element.innerHTML = (snitt);
     
     //metode for aa hente genre paa film
     var title_elementGenre = document.getElementById("genre");
@@ -67,7 +86,7 @@ window.onload = function() {
     //metode for youtube
     var iframe = document.getElementById("youtubeLink");
     var link = movie_object["youtube trailer id"] + "";
-    
+    link = "https://www.youtube.com/embed/" + link;
     iframe.setAttribute("src", link);
     
     // metode for a hente skuespillere
@@ -138,6 +157,7 @@ window.onload = function() {
 	    left = document.createTextNode(" -> " + subkey);
 	    right = document.createTextNode(review_object[key][subkey]);
 	    add_row(review_table, left, right);
+         console.log(right + ": " + key + "   " + subkey );
 	}
     }
 };

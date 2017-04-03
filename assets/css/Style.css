@@ -166,6 +166,12 @@ nav a:hover{
 .filmPoster img{
 	display: block;
 	max-width: 265px;
+	width: 100%;
+    
+}
+#filmBilde{
+	width:100%;
+   
 }
 
 #underbilder {
