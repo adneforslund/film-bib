@@ -10,8 +10,12 @@ function search_for_X(soekeStreng, searchForWhat) {
 	if(searchForWhat == "film_title"){
 		for(index in movies_object){
     		var film_object = movies_object[index];
-    		if(soekeStreng.toLowerCase() === film_object.otitle.toLowerCase() || soekeStreng.toLowerCase() === film_object.ntitle.toLowerCase() ){
-    			build_search_results(film_object);
+    		otitle=film_object.otitle;
+    		ntitle=film_object.ntitle;
+    		if((typeof otitle == "string") && (typeof ntitle == "string") && (typeof soekeStreng == "string")){
+   	 			if(soekeStreng.toLowerCase() === otitle.toLowerCase() || soekeStreng.toLowerCase() === ntitle.toLowerCase() ){
+    				build_search_results(film_object);
+    			}
     		}
     	}
 	}
@@ -20,7 +24,7 @@ function search_for_X(soekeStreng, searchForWhat) {
     	for(index in movies_object){
    		 	var film_object = movies_object[index];
     		folk = film_object.folk;
-    		if (folk){
+    		if ((typeof folk == "string") && (typeof soekeStreng == "string" )){
     			if(folk.toLowerCase().includes(soekeStreng.toLowerCase())){
     				build_search_results(film_object);
    		 		}
@@ -31,7 +35,7 @@ function search_for_X(soekeStreng, searchForWhat) {
     	for(index in movies_object){
    		 	var film_object = movies_object[index];
     		dir = film_object.dir;
-    		if (dir){
+    		if ((typeof dir == "string") && (typeof soekeStreng == "string")){
     			if(dir.toLowerCase().includes(soekeStreng.toLowerCase())){
     				build_search_results(film_object);
    		 		}
@@ -42,10 +46,9 @@ function search_for_X(soekeStreng, searchForWhat) {
     	for(index in genres_object){
    		 	var film_object = genres_object[index];
     		genres = film_object;
-    		if (genres){
+    		if ((typeof genres == "string") && (typeof soekeStreng == "string")){
     			if(genres.includes(soekeStreng.toLowerCase())){
     				build_search_results(movies_object[index]);
-    				console.log(index);
    		 		}
    			}
     	}
@@ -54,7 +57,7 @@ function search_for_X(soekeStreng, searchForWhat) {
     	for(index in movies_object){
    		 	var film_object = movies_object[index];
     		country = film_object.country;
-    		if (country){
+    		if ((typeof contry == "string") && (typeof soekeStreng == "string")){
     			if(country.toLowerCase().includes(soekeStreng.toLowerCase())){
     				build_search_results(film_object);
    		 		}
@@ -116,7 +119,19 @@ function display_X() {
 window.onload = function() {
 	query_params = get_query_string_parameters();
 	search_results = movies_object;
-    var results = []; 
+    var results = [];
+
+    if (query_params.quick_search) {
+		//søker etter tittel og skriver ut hva den søkeretter i toppen av siden. 
+        var resultat = search_for_X(query_params.quick_search, "film_title");
+        resultat = search_for_X(query_params.quick_search, "actor");
+        resultat = search_for_X(query_params.quick_search, "director");
+        resultat = search_for_X(query_params.genre, "genre");
+
+        var searching_for = document.getElementById("sokerEtter");
+    	searching_for.innerHTML=query_params.quick_search;
+    }
+
 	if (query_params.film_title) {
 		//søker etter tittel og skriver ut hva den søkeretter i toppen av siden. 
         var resultat = search_for_X(query_params.film_title, "film_title");

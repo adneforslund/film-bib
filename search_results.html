@@ -28,6 +28,18 @@
 			<a href="#">Mine lån</a>
 			<a href="#">Logg ut!</a>
 		</nav>
+
+		<div id="avansertsokebar">
+			<form id="avansertsok" action="search_results.html" method="get">
+				<input id="advanced_search" name="film_title" type="text" placeholder="søkeord" />
+				<span id="radioknapp"><input type="radio" name="radiosearch" onclick="document.getElementById('advanced_search').name='film_title';" checked="checked"/>Film tittel</span>
+				<span id="radioknapp"><input type="radio" name="radiosearch" onclick="document.getElementById('advanced_search').name='actor';"/>Skuespiller</span>
+				<span id="radioknapp"><input type="radio" name="radiosearch" onclick="document.getElementById('advanced_search').name='director';"/>Regi</span>
+				<span id="radioknapp"><input type="radio" name="radiosearch" onclick="document.getElementById('advanced_search').name='genre';"/>Sjanger</span>
+				<input type="submit" id="submit_search" value="Søk" />
+			</form>
+		</div>
+
 		<div id="sokeresultater">
 			<h1> Søkeresultater: <span id="sokerEtter"></span></h1>
 			

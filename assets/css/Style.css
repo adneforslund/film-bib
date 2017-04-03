@@ -270,5 +270,16 @@ details {
 }
 details summary::-webkit-details-marker { display:none; }
 
-;
 
+#avansertsokebar{
+	height: 10vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#radioknapp{
+	font-size: 26px;
+	margin-left: 1vW;
+	margin-right: 1vW;
+}
+;
