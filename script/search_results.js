@@ -43,25 +43,25 @@ function search_for_X(soekeStreng, searchForWhat) {
     	}
 	}
 	else if(searchForWhat == "genre"){
+		console.log("genre1")
     	for(index in genres_object){
    		 	var film_object = genres_object[index];
     		genres = film_object;
-    		if ((typeof genres == "string") && (typeof soekeStreng == "string")){
+    			console.log("genre2");
     			if(genres.includes(soekeStreng.toLowerCase())){
     				build_search_results(movies_object[index]);
+    				console.log("genre3");
    		 		}
-   			}
     	}
 	}
 	else if(searchForWhat == "country"){
     	for(index in movies_object){
    		 	var film_object = movies_object[index];
     		country = film_object.country;
-    		if ((typeof contry == "string") && (typeof soekeStreng == "string")){
     			if(country.toLowerCase().includes(soekeStreng.toLowerCase())){
     				build_search_results(film_object);
    		 		}
-   			}
+   			
     	}
 	}
 	
@@ -126,7 +126,6 @@ window.onload = function() {
         var resultat = search_for_X(query_params.quick_search, "film_title");
         resultat = search_for_X(query_params.quick_search, "actor");
         resultat = search_for_X(query_params.quick_search, "director");
-        resultat = search_for_X(query_params.genre, "genre");
 
         var searching_for = document.getElementById("sokerEtter");
     	searching_for.innerHTML=query_params.quick_search;
