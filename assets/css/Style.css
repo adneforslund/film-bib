@@ -109,7 +109,7 @@ nav a:hover{
 
 .filmBilde{
 	max-width: 29vw;
-	max-height: 40vh;
+	height: 20vh;
 	vertical-align: bottom;
 	}
 
@@ -166,13 +166,19 @@ nav a:hover{
 .filmPoster img{
 	display: block;
 	max-width: 265px;
+	width: 100%;
+    
+}
+#filmBilde{
+	width:100%;
+   
 }
 
 #underbilder {
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: none;
+padding: 0;
 max-width: 50vw;
 
 }
@@ -189,13 +195,13 @@ max-width: 50vw;
 }
 
 
-.filmTittel{
+#filmTittel{
 
 }
-.norskTittel{
+#norskTittel{
 	
 }
-.credits{
+#credits{
 	list-style: none;
 	display: flex;
 	flex-direction: column;
@@ -204,61 +210,69 @@ max-width: 50vw;
 	padding: 0;
     
 }
-.credits a{
+#credits a{
 	color: inherit;
 }
 
 
-.credits a:hover{
+#credits a:hover{
 	color: gold;
 }
-.credits a:visited{
+#credits a:visited{
 	color: currentColor;
 
 }
-.credits{
+#credits{
 	
 }
-.credits li{
+#credits li{
   margin-left: 30px;
   
 }
-.beskrivelse{
+#beskrivelse{
 text-align: left;
 
 }
-.genre{
+#genre{
 
 text-align: left;
 }
-.regi{
+#regi{
 
 }
-.youtubeFilm{
+#youtubeFilm{
    width: 55%;
    padding-bottom:  5%;
    margin: auto;
 }
 
-.skuespillerNavn{
+#skuespillerNavn{
    
 }
 
+#kommentarfelt{
 
+}
+
+#kommentarInput{
+	height:200px;
+    font-size:14pt;
+    width: 70vw;
+}
 /* skrevet av kiy005 nedover*/
 /*sokeresultatside*/
 
-.sokeresultater{
+#sokeresultater{
 	margin-left: 7vw;
 	margin-right: 7vW;
 }
 
-.sokeresultater h1{
+#sokeresultater h1{
 	color: darkgray;
 }
 
 
-.sokeresultater li{
+#sokeresultater li{
 	list-style: none;
 }
 
@@ -270,5 +284,16 @@ details {
 }
 details summary::-webkit-details-marker { display:none; }
 
-;
 
+#avansertsokebar{
+	height: 10vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#radioknapp{
+	font-size: 26px;
+	margin-left: 1vW;
+	margin-right: 1vW;
+}
+;
