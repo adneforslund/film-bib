@@ -6,7 +6,6 @@ function panic(message) {
 }
 
 
-
 window.onload = function() {
     query_params = get_query_string_parameters();
     if (!query_params.id) {
@@ -103,19 +102,13 @@ window.onload = function() {
 
     // metode for a hente a hente stor bilde / skrevet av Bjørnar Herland/kiy005
     var filmbilde = document.getElementById("filmbilde");
-    if (movie_object.id < 1000) {
-        filmbilde.src = filmbilde.src = "https://nelson.uib.no/o/0/" + movie_object.id + ".jpg";
-        legginnsmaabilder(0);
-    } else if (movie_object.id < 2000) {
-        filmbilde.src = filmbilde.src = "https://nelson.uib.no/o/1/" + movie_object.id + ".jpg";
-        legginnsmaabilder(1);
-    } else if (movie_object.id < 3000) {
-        filmbilde.src = filmbilde.src = "https://nelson.uib.no/o/2/" + movie_object.id + ".jpg";
-        legginnsmaabilder(2);
-    } else {
-        filmbilde.src = filmbilde.src = "https://nelson.uib.no/o/3/" + movie_object.id + ".jpg";
-        legginnsmaabilder(3);
-    }
+
+    var heltallDiv = Math.floor(movie_object.id / 1000);
+    filmbilde.src = "https://nelson.uib.no/o/" + heltallDiv + "/" + movie_object.id + ".jpg";
+    legginnsmaabilder(heltallDiv);
+
+
+
 
     // metode for a hente a hente små bilder skrevet av Bjørnar Herland/kiy005
     function legginnsmaabilder(tall) {
@@ -132,10 +125,6 @@ window.onload = function() {
             }
         }
     }
-
-
-
-
 
 
 };

@@ -14,16 +14,10 @@ function addFilm(where, start) {
         movie_details = movies_object[movie_id];
         var img = document.createElement("img");
         if (movie_id < (start + 30)) {
-            if (movie_id < 1000) {
-                img.src = "https://nelson.uib.no/o/0/" + movie_id + ".jpg";
 
-            } else if (movie_id < 2000) {
-                img.src = "https://nelson.uib.no/o/1/" + movie_id + ".jpg";
-            } else if (movie_id < 3000) {
-                img.src = "https://nelson.uib.no/o/2/" + movie_id + ".jpg";
-            } else {
-                img.src = "https://nelson.uib.no/o/3/" + movie_id + ".jpg";
-            }
+            var heltallDiv = Math.floor(movie_id / 1000);
+            img.src = "https://nelson.uib.no/o/" + heltallDiv + "/" + movie_id + ".jpg";
+
         }
         img.onerror = function() {
             this.src = "http://fillmurray.com/200/200";

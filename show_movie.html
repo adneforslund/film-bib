@@ -1,6 +1,4 @@
 <!-- klassen er skrevet av Ådne Forslund/afo014, med noen metoder laget av bjornar-->
-
-
 <!DOCTYPE html>
 <html>
   <meta charset="utf-8"/>
@@ -14,15 +12,15 @@
     <link rel="stylesheet" href="assets/css/Style.css" type="text/css" />
   </head>
   <body>
-  <div id ="topBanner">
+    <div id ="topBanner">
       <img class="ikon" id="menyknapp" src="assets/images/Ikoner/menyknapp.png" alt="menyknappen">
-      <img class="ikon" id="logo" src="assets/images/Ikoner/pingvin2.png" alt="logo">
+      <a href="index.html"><img class="ikon" id="logo" src="assets/images/Ikoner/pingvin2.png" alt="logo"></a>
       <img class="ikon" id="sokeknapp" src="assets/images/Ikoner/sokeknapp2.png" alt="søkeknapp">
       
     </div>
     <div class="gjemt sokebar">
       <form id="search" action="search_results.html" method="get">
-        <input id="film_title" name="film_title" type="text" placeholder="søkeord" />
+        <input id="quick_search" name="quick_search" type="text" placeholder="søkeord" />
         <input type="submit" id="submit_search" value="Søk" />
       </form>
     </div>
@@ -57,7 +55,7 @@
       </div>
       <section class="skuespillerBlokk">
         <div class="filmPoster" >
-        <img id="filmbilde" alt="filmbilde">
+          <img id="filmbilde" alt="filmbilde">
           <div id="underbilder">
             <img class="underbildesmaa" alt="filmbilde">
             <img class="underbildesmaa" alt="filmbilde">
@@ -78,25 +76,20 @@
       <div id="youtubeFilm"><style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe id="youtubeLink" frameborder='0' allowfullscreen></iframe></div>
     </div>
     
-    <section id = "kommentarfelt"> 
-    <h3>Brukervurderinger: </h3>
-
-    <ul id="kommentarer">
-
-      
-    </ul>
-    <form id ="felt">
-      <h3>Din vurdering:</h3> 
-  <textarea id="kommentarInput" type="text" name="Vurdering"></textarea>
-    </form>
-
-    <input type="submit" name="send_inn" value="send inn">
-     </section>
-
-  
-
-  
-   <script type="text/javascript" src="script/funksjoner.js"></script>
+    <section id = "kommentarfelt">
+      <h3>Brukervurderinger: </h3>
+      <ul id="kommentarer">
+        
+      </ul>
+      <form id ="felt">
+        <h3>Din vurdering:</h3>
+        <textarea id="kommentarInput" type="text" name="Vurdering"></textarea>
+      </form>
+      <input type="submit" name="send_inn" value="send inn">
+    </section>
+    
+    
+    <script type="text/javascript" src="script/funksjoner.js"></script>
     
   </body>
 </html>

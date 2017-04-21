@@ -282,6 +282,10 @@ details {
     background-color: #696969;
 	border-radius: 25px;
 }
+details:hover {
+	padding: 18px;
+	background-color: #696970
+}
 details summary::-webkit-details-marker { display:none; }
 
 
