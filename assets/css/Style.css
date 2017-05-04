@@ -93,7 +93,8 @@ nav a:hover{
 }
 
 .pil {
-	width: 2vh; 
+	width: 5vw; 
+	height:22vh;
 }
 
 
@@ -109,7 +110,7 @@ nav a:hover{
 
 .filmBilde{
 	max-width: 29vw;
-	height: 20vh;
+	height: 22vh;
 	vertical-align: bottom;
 	}
 
