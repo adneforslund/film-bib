@@ -39,7 +39,7 @@ window.onload = function() {
 
     // metode for rating fra bruker xyz001, kan forandres til å hente fra flere
     var review_element = document.getElementById("ratingTall");
-    console.log(review_object.rating)
+    
 
     var sammenlagt = 0;
     var antall = 0;
