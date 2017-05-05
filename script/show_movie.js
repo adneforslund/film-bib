@@ -1,4 +1,4 @@
-// klassen er skrevet av Ådne Forslund/afo014
+// klassen er skrevet av 241
 
 function panic(message) {
 
@@ -97,7 +97,7 @@ window.onload = function() {
 
 
 
-    // metode for a hente a hente stor bilde / skrevet av Bjørnar Herland/kiy005
+    // metode som henter det største bildet til filmsiden
     var filmbilde = document.getElementById("filmbilde");
 
     var heltallDiv = Math.floor(movie_object.id / 1000);
@@ -107,7 +107,7 @@ window.onload = function() {
 
 
 
-    // metode for a hente a hente små bilder skrevet av Bjørnar Herland/kiy005
+    // metode for a hente a hente små bilder skrevet av 253
     function legginnsmaabilder(tall) {
         for (i = 0; i < 4; i++) {
             var smaabilde = document.getElementsByClassName("underbildesmaa")[i];

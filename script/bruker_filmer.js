@@ -1,4 +1,4 @@
-//skrevet av Bjørnar Herland/kiy005 
+//skrevet av 253
 
 object_onsker_laan = {
     "brukernavn": [film_id, film_id],

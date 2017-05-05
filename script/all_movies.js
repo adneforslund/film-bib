@@ -4,7 +4,7 @@ window.onload = function() {
     addFilm("sistLant", 16);
     addFilm("ambefalinger", 9);
 }
-
+// skrevet av 253
 function addFilm(where, start) {
 
     var container = document.getElementById(where);
