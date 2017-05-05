@@ -6,9 +6,9 @@ window.onload = function() {
     addFilm("sistLant", 16);
     addFilm("ambefalinger", 9);
 }
-
 // legger inn en rull med filmer som skal lastes ned
 
+// skrevet av 253
 function addFilm(where, start) {
 
     var container = document.getElementById(where);

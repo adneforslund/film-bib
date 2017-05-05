@@ -2,9 +2,8 @@
 var arr = [];
 
 
-/* Her kan dere implementere en søkefunksjon. For eksempel:
- */
-// skrevet av Adne Forslund/afo014, forbedret av Bjørnar Herland/kiy005
+
+// skrevet av 241
 function search_for_X(soekeStreng, searchForWhat) {
     if (searchForWhat == "film_title") {
         for (index in movies_object) {
@@ -18,7 +17,7 @@ function search_for_X(soekeStreng, searchForWhat) {
             }
         }
     }
-    // skrevet av Bjørnar Herland/kiy005
+    // skrevet av 253
     else if (searchForWhat == "actor") {
         for (index in movies_object) {
             var film_object = movies_object[index];
@@ -66,7 +65,7 @@ function search_for_X(soekeStreng, searchForWhat) {
 
 /* Her kan dere implementere en display function som viser resulatetene av søket. For eksempel:
  */
-// skrevet av Bjørnar Herland/kiy005
+// skrevet av 253 og 241
 function display_X() {
     var container = document.getElementById("sokeresultater");
 
@@ -161,7 +160,7 @@ window.onload = function() {
     //Her kan dere for eksempel kalle en (display) funksjon som viser søkeresultater 
 }
 
-// skrevet av Bjørnar Herland
+// skrevet av 253
 function build_search_results(film_object) {
     arr.push(film_object);
 }

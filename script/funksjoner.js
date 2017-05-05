@@ -1,6 +1,6 @@
 var sokeknapp = document.querySelector("#sokeknapp");
 var menyknapp = document.querySelector("#menyknapp");
-
+// skrevet av 253
 function toggle() {
     if (this === sokeknapp) {
         document.querySelector(".sokebar").classList.toggle("gjemt");
