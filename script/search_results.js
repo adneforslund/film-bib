@@ -40,14 +40,14 @@ function search_for_X(soekeStreng, searchForWhat) {
             }
         }
     } else if (searchForWhat == "genre") {
-        console.log("genre1")
+
         for (index in genres_object) {
             var film_object = genres_object[index];
             genres = film_object;
-            console.log("genre2");
+
             if (genres.includes(soekeStreng.toLowerCase())) {
                 build_search_results(movies_object[index]);
-                console.log("genre3");
+
             }
         }
     } else if (searchForWhat == "country") {

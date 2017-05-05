@@ -1,7 +1,7 @@
 // klassen er skrevet av Ådne Forslund/afo014
 
 function panic(message) {
-    // window.history.back();
+
     alert(message);
 }
 
@@ -28,13 +28,11 @@ window.onload = function() {
 
     // render page
     var title_element = document.getElementById("filmTittel");
-    // title_element.appendChild(document.createTextNode(movie_object["otitle"]));    
-    console.log(title_element);
     title_element.innerHTML = movie_object["otitle"];
 
     // metode for norsk tittel
     var title_elementNorsk = document.getElementById("norskTittel");
-    console.log(title_elementNorsk);
+
     title_elementNorsk.innerHTML = ("Norsk tittel: " + movie_object["ntitle"]);
 
     // metode for rating fra bruker xyz001, kan forandres til å hente fra flere
@@ -53,22 +51,22 @@ window.onload = function() {
 
     //metode for aa hente genre paa film
     var title_elementGenre = document.getElementById("genre");
-    console.log(title_elementGenre);
+
     title_elementGenre.innerHTML = ("Genre : " + genre_object + ".");
 
     // metode for a hente beskrivelse
     var title_elementBeskrivelse = document.getElementById("beskrivelse");
-    console.log(title_elementBeskrivelse);
+
     title_elementBeskrivelse.innerHTML = movie_object["description"];
 
 
     // metode for regi
     var title_elementRegi = document.getElementById("regi");
-    console.log(title_elementRegi);
+
     var dir = movie_object["dir"] + "";
     title_elementRegi.innerHTML = ("Regi: " + dir + ".");
 
-    //metode for youtube
+    //metode for å hente youtubelink fra object
     var iframe = document.getElementById("youtubeLink");
     var link = movie_object["youtube trailer id"] + "";
     link = "https://www.youtube.com/embed/" + link;
@@ -81,7 +79,7 @@ window.onload = function() {
 
     // metode for a få kommentarfelt
     var title_elementReview = document.getElementById("kommentarer");
-
+    // lager kommentarfelt i form av en liste
     for (key in review_object) {
         var li = document.createElement("li");
         if (typeof review_object[key].comment == "string") {

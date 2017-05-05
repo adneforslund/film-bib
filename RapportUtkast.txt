@@ -5,4 +5,14 @@ Der vår kode referer til javascript-filen object.js, referer MongoDB-utgaven ti
 " for (movie_id_index in profile.loans) { movie_id = profile.loans[movie_id_index] "
 
 Denne henter id på alle filmer brukeren har lånt.
+
+------------------- DEL 2 -----------------------------------
+
+
+I show_movie.html ville HTML-koden blitt identisk, men javascripten ville vært forskjellig. Istedenfor å hente objektet movie_object fra filen object.js, ville koden ha laget en ny XMLHTTPRequest();, brukt, movie_object = xhr.response.rows[0];,  fått objektet fra rett index via query_params og parset/splittet det i mindre deler. Disse ville bli brukt på samme måte som om man hadde hentet det fra object.js.
+
+
+
+
+
                 
