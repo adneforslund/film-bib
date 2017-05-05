@@ -11,13 +11,10 @@ function toggle() {
 }
 
 function snurr() {
-
     var forelder = this.parentNode.getAttribute("id");
     var barn = this.parentNode.children;
     var start = NaN;
-
     if (this.classList.contains("pilhoyre")) {
-
         for (i = 1; i < (barn.length - 1); i++) {
             if (barn[i].classList.contains("gjemt") == false) {
                 if (start != start) {
@@ -25,11 +22,12 @@ function snurr() {
                 }
             }
         }
-        barn[start].classList.toggle("gjemt");
-        barn[start + 3].classList.toggle("gjemt");
-
-    } else {
-
+        if(start < 25){
+            barn[start].classList.toggle("gjemt");
+            barn[start + 3].classList.toggle("gjemt");
+        }
+    }
+         else {
         for (i = 1; i < (barn.length - 1); i++) {
             if (barn[i].classList.contains("gjemt") == false) {
                 if (start != start) {
@@ -43,6 +41,5 @@ function snurr() {
         }
     }
 }
-
 sokeknapp.addEventListener("click", toggle);
 menyknapp.addEventListener("click", toggle);

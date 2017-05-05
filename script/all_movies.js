@@ -1,9 +1,13 @@
-window.onload = function() {
+// filen er skrevet av kiy005
 
+
+window.onload = function() {
     addFilm("sistTilgjengelig", 3);
     addFilm("sistLant", 16);
     addFilm("ambefalinger", 9);
 }
+
+// legger inn en rull med filmer som skal lastes ned
 
 function addFilm(where, start) {
 
@@ -11,14 +15,13 @@ function addFilm(where, start) {
     addArrow(("#" + where), true);
 
     for (movie_id in movies_object) {
+        if (movie_id < (start + 30)) {
         movie_details = movies_object[movie_id];
         var img = document.createElement("img");
-        if (movie_id < (start + 30)) {
-
+        
             var heltallDiv = Math.floor(movie_id / 1000);
             img.src = "https://nelson.uib.no/o/" + heltallDiv + "/" + movie_id + ".jpg";
-
-        }
+    
         img.onerror = function() {
             this.src = "http://fillmurray.com/200/200";
         }
@@ -35,7 +38,7 @@ function addFilm(where, start) {
         }
         a.appendChild(img);
         container.appendChild(a);
-
+        }
     }
 
     addArrow(("#" + where), false);
