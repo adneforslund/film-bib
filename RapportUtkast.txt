@@ -1,0 +1,23 @@
+------------------> DEL1
+
+Der vår kode referer til javascript-filen object.js, referer MongoDB-utgaven tilfilen profile.js. Der kjører profile.js den innebygde javascript-metoden XMLHttpRequest(), som er en konstruktør. Der bruker den open()-funksjonen for å sende en request til en nettside eller server, i dette tilfeller wildboy.uib/mongodb , med et brukernavn som variabel og bruker deretter responseType til å få informasjonen fra server til å bli en JSON-object i den notasjonen/formateringen. Deretter bruker koden dot-notasjon for å hente elementet "rows", som består av en array bestående av elementer, der noen er andre arrayer. Ut fra rows.response[0], opprettes et object av alt som er inne i rows, og kalles 'profil'. Så brukes igjen dot-notasjon for å hente verdiene brukeren har lånt ved hjelp av løkken i form av 
+
+" for (movie_id_index in profile.loans) { movie_id = profile.loans[movie_id_index] "
+
+Denne henter id på alle filmer brukeren har lånt.
+
+------------------- DEL 2 -----------------------------------
+
+
+I show_movie.html ville HTML-koden blitt identisk, men javascripten ville vært forskjellig. Istedenfor å hente objektet movie_object fra filen object.js, ville koden ha laget en ny XMLHTTPRequest();, brukt var xhr = new XMLHttpRequest(); så
+
+    xhr.open("GET", "http://wildboy.uib.no/mongodb/objects/?filter_id=" + query_params.id, true); 
+    og deretter.
+ movie_object = xhr.response.rows[0];
+ , og  fått objektet fra rett index via query_params og parset/splittet det i mindre deler. Disse ville bli brukt på samme måte som om man hadde hentet det fra object.js. 
+
+
+
+
+
+                
